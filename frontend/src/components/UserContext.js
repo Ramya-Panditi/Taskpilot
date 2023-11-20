@@ -13,7 +13,7 @@ export const UserProvider = ({ children }) => {
     const id = sessionStorage.getItem('id') || localStorage.getItem('id');
     if (user === null || user.id !== id) {
       
-      axios.get(`http://localhost:4000/show/${id}`)
+      axios.get(`https://taskpilot-chi.vercel.app/show/${id}`)
         .then((response) => {
           if (response.status === 200) {
             setUser(response.data);

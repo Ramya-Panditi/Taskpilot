@@ -13,7 +13,12 @@ db.on("error",() => console.log("error"));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(cors());
+app.use(cors(
+    {
+        origin:["https://taskpilot-chi.vercel.app"],
+        methods:["POST","GET","PUT","DELETE"]
+    }
+));
 
 
 app.use("/",route);

@@ -24,16 +24,14 @@ useEffect(() => {
     }
   }
   fetchData();
-  
 }, []);
-
    return <div className='container-fluid dashboard'>
        <div className='row dash-charts d-flex flex-row justify-content-center align-items-center gap-1 mb-sm-5 mb-md-2'>
         <div className='col-lg-5 col-sm-8 col-8  mt-3 rounded text-light text-center'>
          <Charts />
         </div>
         <div className='col-lg-5 col-sm-8 col-8 mt-3 details rounded mx-2'>
-           <Tasktable/>
+          <Tasktable/>
         </div>
        </div>
        <div className='row d-flex justify-content-center align-items-center  mt-5 mt-sm-4 mt-md-3 mt-lg-1 '>

@@ -5,7 +5,6 @@ import { useSelector,useDispatch } from 'react-redux';
 import { getData } from '../reduxstore/dataslice';
 import { handleSave } from './TaskManager';
 
-
 function Calendar() {
   const dispatch  = useDispatch();
   useEffect(()=>{

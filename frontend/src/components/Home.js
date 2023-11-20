@@ -8,7 +8,7 @@ import Dashboard from './Dashboard';
 import Board from './Board';
 import Calender from './Calender';
 import { UserProvider } from './UserContext';
-import Profile from './Profile';
+
 
 function Home(){
     // const location = useLocation();
@@ -25,8 +25,6 @@ function Home(){
             <Route path='/Dashboard' element = {<Dashboard />}/>
             <Route path='/Board' element = {<Board/>}/>
             <Route path='/Calender' element = {<Calender/>}/>
-            <Route path='/Profile' element = {<Profile/>}/>
-            
             </Routes>
                 </UserProvider>
                 </div> 

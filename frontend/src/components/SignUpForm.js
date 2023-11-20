@@ -47,7 +47,7 @@ const SignUpForm = () => {
     try {
       console.log("Inside try block");
       
-      const response = await axios.post('http://localhost:4000/signup', {
+      const response = await axios.post('https://taskpilot-chi.vercel.app/signup', {
         name,
         email,
         password,

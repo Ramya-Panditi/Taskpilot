@@ -80,7 +80,6 @@ const TaskEditStyle = {
 };
 
 function Lists() {
-  
   const user = useSelector((state)=> { return state.app.user});
   console.log(user);
   const [tasks, setTasks] = useState([]);
@@ -94,7 +93,7 @@ function Lists() {
     }
     try {
       axios
-      .put(`http://localhost:4000/updatestatus/${sessionStorage.getItem("id")}/${id}`)
+      .put(`https://taskpilot-chi.vercel.app/updatestatus/${sessionStorage.getItem("id")}/${id}`)
       .then((res) => {
         if (res.status === 200) {
           console.log("Completed the task yayy")
@@ -142,7 +141,7 @@ function Lists() {
   const confirmDeleteTask = () => {
     if (taskid !== null) {
       try {
-        axios.delete("http://localhost:4000/delete-task/" + sessionStorage.getItem("id")+ "/" + taskid + "/")
+        axios.delete("https://taskpilot-chi.vercel.app/delete-task/" + sessionStorage.getItem("id")+ "/" + taskid + "/")
         .then((res) => {
           if (res.status === 200) {
             toast.success('Task deleted successfully'); // Trigger the toast message
@@ -182,7 +181,7 @@ function Lists() {
           
         };
         const response = await axios.put(
-          `http://localhost:4000/updatetask/${sessionStorage.getItem("id")}/${editedTask._id}`,
+          `https://taskpilot-chi.vercel.app/updatetask/${sessionStorage.getItem("id")}/${editedTask._id}`,
           updatedTask
           );
   

@@ -4,7 +4,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const getData = createAsyncThunk("users", async () => {
     
       const id = sessionStorage.getItem('id') || localStorage.getItem('id');
-      const response = await fetch(`http://localhost:4000/show/${id}`);
+      const response = await fetch(`https://taskpilot-chi.vercel.app/show/${id}`);
       const data = await response.json();
       return data;
 });

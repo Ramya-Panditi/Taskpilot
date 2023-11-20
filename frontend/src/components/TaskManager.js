@@ -52,7 +52,7 @@ function TaskManager({ onClose }) {
     setUnsavedChanges(false);
     onClose();
     try{
-      await axios.post(("http://localhost:4000/create/" + sessionStorage.getItem("id")),{
+      await axios.post(("https://taskpilot-chi.vercel.app/create/" + sessionStorage.getItem("id")),{
         title,description,duedate,time,category
       }).then((res)=>{
         if(res.data === "ADDED"){

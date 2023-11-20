@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import './Profile.css';
 import Navbar from './Navbar';
@@ -11,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Profile = () => {
 
-    const data = useSelector((state)=>{return state.app.user}) ;
+    const data = useSelector((state)=>{return state.app.user});
     const dispatch = useDispatch();
     // Dummy user data, replace this with your actual user data
     const [user, setUser] = useState({
@@ -50,7 +49,7 @@ const Profile = () => {
           password: formData.password,
         });
         try {
-            axios.put(`http://localhost:4000/updatedetails/${sessionStorage.getItem("id")}`, {
+            axios.put(`https://taskpilot-chi.vercel.app/updatedetails/${sessionStorage.getItem("id")}`, {
                 name: formData.username,
                 email: formData.email,
                 password: formData.password,

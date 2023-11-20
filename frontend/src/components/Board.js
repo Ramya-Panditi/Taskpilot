@@ -11,6 +11,7 @@ const icons = {
     Social: <i className="fa-solid fa-images fa-2xl" ></i>,
     Others: <i class="fa-solid fa-user-secret fa-2xl"></i>
 }
+
 const todoListNotes = [
     "Schedule regular breaks to avoid burnout.",
     "Review and update long-term goals.",
@@ -28,9 +29,6 @@ const todoListNotes = [
     "Incorporate physical exercise into your routine.",
     "Reflect on the day's accomplishments and areas for improvement."
 ];
-
-  
-  
 function Board() {
     const [note, setNote] = useState(todoListNotes[Math.floor(Math.random() * todoListNotes.length)]);
     const [activeTab, setActiveTab] = useState('upcoming');
@@ -48,10 +46,10 @@ function Board() {
                 return (task.duedate.substring(0, 10) >= new Date().toISOString().substring(0, 10)) && !task.status ;
             })
             const due = data.filter((task) => {
-                return (task.duedate.substring(0, 10) <= new Date().toISOString().substring(0, 10)) && !task.status ;
+                return (task.duedate.substring(0, 10) < new Date().toISOString().substring(0, 10)) && !task.status ;
             })
             const completed =  data.filter((task) => {
-                return (task.duedate.substring(0, 10) >= new Date().toISOString().substring(0, 10)) && task.status ;
+                return (task.duedate.substring(0, 10) > new Date().toISOString().substring(0, 10)) && task.status ;
             })
              
             setTodo(upcoming);
