@@ -16,6 +16,7 @@
     app.use(cors({
         origin: ["https://taskpilot-chi.vercel.app/","https://taskpilot-5z61.vercel.app"],
         methods: ["POST", "GET", "PUT", "DELETE"],
+        credentials:true
       }));
     app.use("/",route);
 
