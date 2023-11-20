@@ -14,7 +14,7 @@
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended:true}));
     app.use(cors({
-        origin: ["https://taskpilot-chi.vercel.app/","https://taskpilot-5z61.vercel.app"],
+        origin: ["https://taskpilot-chi.vercel.app","https://taskpilot-5z61.vercel.app"],
         methods: ["POST", "GET", "PUT", "DELETE"],
         credentials:true
       }));
