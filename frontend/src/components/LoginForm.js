@@ -50,7 +50,6 @@ const LoginForm = () => {
     if (e.nativeEvent.submitter.name === 'loginButton' && !validateLoginForm()) {
       return;
     }
-
     // The rest of your existing code for form submission...
     if (validateLoginForm()) {
       try {
